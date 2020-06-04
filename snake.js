@@ -25,7 +25,7 @@ const nextHead = (state) =>
     ? { x: 2, y: 2 }
     : {
         x: mod(state.cols)(state.snake[0].x + state.moves[0].x),
-        y: mod(state.cols)(state.snake[0].y + state.moves[0].y),
+        y: mod(state.rows)(state.snake[0].y + state.moves[0].y),
       };
 const nextSnake = (state) =>
   willCrash(state)
